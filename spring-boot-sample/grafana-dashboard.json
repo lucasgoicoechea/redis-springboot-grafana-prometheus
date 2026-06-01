@@ -1,0 +1,27 @@
+{
+  "dashboard": {
+    "id": null,
+    "uid": "spring-boot-monitoring",
+    "title": "Spring Boot Monitoring",
+    "panels": [
+      {
+        "type": "stat",
+        "title": "HTTP Request Rate",
+        "targets": [
+          {
+            "expr": "rate(http_server_requests_seconds_count[1m])"
+          }
+        ]
+      },
+      {
+        "type": "stat",
+        "title": "Cache Operations",
+        "targets": [
+          {
+            "expr": "rate(spring_cache_operations_seconds_count[1m])"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+[project]
+name = "agentic-poc"
+version = "0.1.0"
+description = "Agentic POC for Spring Boot monitoring, Redis caching, and Prometheus/Grafana observability."
+authors = ["Agentic POC <agentic-poc@example.com>"]
+readme = "README.md"
+requires-python = ">=3.10"
+
+[build-system]
+requires = ["setuptools>=60.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["tests*"]
+
+[project.scripts]
+agentic-poc = "agentic_poc.main:main"
